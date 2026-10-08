@@ -1,0 +1,865 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fffafc;
+    color: #332438;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+span {
+    color: #a88635;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+header {
+    height: 90px;
+    padding: 10px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eaddec;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    width: 90px;
+    height: 70px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    font-size: 14px;
+    color: #49364e;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a88635;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 80px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background:
+        radial-gradient(circle at 80% 50%, #eadff0, transparent 35%),
+        #fffafc;
+}
+
+.hero-text {
+    width: 55%;
+}
+
+.subtitulo,
+.titulo-pequeno {
+    color: #a88635;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    max-width: 650px;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 68px;
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    color: #3b2442;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #a88635;
+}
+
+.hero-text > p:not(.subtitulo) {
+    max-width: 520px;
+
+    color: #756879;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.botao {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.principal {
+    background: #5b3765;
+    color: white;
+}
+
+.principal:hover {
+    background: #41254a;
+    transform: translateY(-2px);
+}
+
+.secundario {
+    border: 1px solid #a88635;
+    color: #795f20;
+}
+
+.secundario:hover {
+    background: #a88635;
+    color: white;
+}
+
+
+/* =========================
+   LOGO HERO
+========================= */
+
+.hero-logo {
+    width: 40%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.circulo {
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: #eee3f1;
+
+    border: 1px solid #c4a65f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 20px 60px rgba(76, 39, 86, 0.12);
+}
+
+.circulo img {
+    width: 270px;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    padding: 110px 10%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 100px;
+
+    background: white;
+}
+
+.sobre-imagem {
+    width: 45%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-decorativa {
+    width: 330px;
+    height: 400px;
+
+    border-radius: 170px 170px 20px 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e8d8ec,
+            #f8edf8
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 100px;
+
+    box-shadow: 15px 15px 0 #a88635;
+}
+
+.sobre-texto {
+    width: 55%;
+}
+
+.sobre-texto h2,
+.cabecalho-secao h2,
+.contato h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 48px;
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    color: #3b2442;
+
+    margin-bottom: 25px;
+}
+
+.sobre-texto p:not(.titulo-pequeno) {
+    color: #756879;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.produtos {
+    padding: 110px 8%;
+
+    background: #f7f0f8;
+}
+
+.cabecalho-secao {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+}
+
+.cabecalho-secao h2 {
+    margin-bottom: 15px;
+}
+
+.cabecalho-secao > p:last-child {
+    color: #756879;
+    line-height: 1.7;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    border: 1px solid #eaddec;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(73, 45, 82, 0.12);
+}
+
+.card.destaque {
+    border-top: 4px solid #a88635;
+}
+
+.icone {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #4b3053;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #817384;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.card a {
+    color: #a88635;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   GALERIA
+========================= */
+
+/* 
+   CORRIGIDO:
+   As imagens agora mantêm o tamanho proporcional
+   e não são cortadas.
+*/
+
+.galeria {
+    padding: 110px 8%;
+
+    background: white;
+}
+
+.galeria-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    align-items: start;
+}
+
+/* Cada foto acompanha sua própria proporção */
+
+.galeria-grid > div {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d9c6df,
+            #f7edf8
+        );
+
+    transition: 0.3s;
+}
+
+/* Remove os tamanhos especiais que deixavam a galeria torta */
+
+.foto1,
+.foto2,
+.foto3,
+.foto4,
+.foto5,
+.foto6 {
+    grid-row: auto;
+    grid-column: auto;
+}
+
+/* Imagem inteira, sem cortar */
+
+.galeria-grid > div img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+
+.galeria-grid > div:hover {
+    transform: scale(1.02);
+}
+
+.galeria-grid > div:hover img {
+    transform: scale(1.01);
+}
+
+/* Legenda */
+
+.galeria-grid > div span {
+    position: absolute;
+
+    left: 50%;
+    bottom: 20px;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    background: rgba(55, 30, 62, 0.75);
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   DIFERENCIAIS
+========================= */
+
+.diferenciais {
+    padding: 100px 8%;
+
+    background: #4b2d55;
+
+    color: white;
+}
+
+.diferenciais .titulo-pequeno {
+    color: #d5b968;
+}
+
+.diferenciais h2 {
+    color: white;
+}
+
+.diferenciais h2 span {
+    color: #d5b968;
+}
+
+.diferenciais-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+.diferenciais-grid div {
+    padding: 20px;
+
+    border-top: 1px solid
+        rgba(255,255,255,0.3);
+}
+
+.diferenciais strong {
+    color: #d5b968;
+
+    font-size: 14px;
+}
+
+.diferenciais h3 {
+    margin: 15px 0;
+
+    font-family: "DM Serif Display", serif;
+
+    font-size: 24px;
+}
+
+.diferenciais p {
+    color: #ded3e1;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    padding: 100px 8%;
+
+    background: #fffafc;
+}
+
+.contato-box {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #f1e6f3,
+            #fff8f1
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.contato-box > div:first-child {
+    max-width: 600px;
+}
+
+.contato h2 {
+    font-size: 45px;
+}
+
+.contato h2 span {
+    display: block;
+}
+
+.contato-box p:not(.titulo-pequeno) {
+    color: #756879;
+
+    line-height: 1.7;
+}
+
+.contatos {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    min-width: 240px;
+}
+
+.contato-item {
+    background: white;
+
+    padding: 18px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    transition: 0.3s;
+}
+
+.contato-item:hover {
+    transform: translateX(5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(70, 40, 80, 0.1);
+}
+
+.contato-item > span {
+    font-size: 25px;
+}
+
+.contato-item div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.contato-item small {
+    color: #9b8c9f;
+}
+
+.contato-item strong {
+    color: #4b3053;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background: #321e39;
+
+    color: #ddd;
+
+    padding: 35px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+}
+
+.footer-logo img {
+    width: 70px;
+}
+
+footer a {
+    color: #d5b968;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .hero-text,
+    .sobre-texto {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-text > p:not(.subtitulo) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .botoes {
+        justify-content: center;
+    }
+
+    .hero-logo {
+        width: 100%;
+    }
+
+    .sobre {
+        flex-direction: column;
+
+        gap: 60px;
+    }
+
+    .sobre-imagem {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .diferenciais-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .contato-box {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .contatos {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        height: auto;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 10px;
+    }
+
+    nav {
+        gap: 10px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .circulo {
+        width: 260px;
+        height: 260px;
+    }
+
+    .circulo img {
+        width: 210px;
+    }
+
+    .sobre,
+    .produtos,
+    .galeria,
+    .diferenciais,
+    .contato {
+        padding: 70px 6%;
+    }
+
+    .sobre-texto h2,
+    .cabecalho-secao h2,
+    .contato h2 {
+        font-size: 38px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* GALERIA NO CELULAR */
+
+    .galeria-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px;
+    }
+
+    .galeria-grid > div {
+        width: 100%;
+        height: auto;
+    }
+
+    .galeria-grid > div img {
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-box {
+        padding: 35px 20px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}
